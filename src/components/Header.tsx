@@ -1,14 +1,6 @@
 import { ConnectButton } from "@rainbow-me/rainbowkit"
-import { useAccount, useBalance } from "wagmi"
 
 const Header = () => {
-  const { address } = useAccount()
-  const { data: balance } = useBalance({
-    address: address,
-    query: {
-      enabled: !!address,
-    },
-  })
   return (
     <header className="glass-w3gg sticky top-0 z-50 py-4 border-b border-yellow-400/20 backdrop-blur-xl">
       <div className="container mx-auto px-6 flex justify-between items-center">
